@@ -1,0 +1,3385 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files (x86)\FME\fme.exe" "C:\Users\pd3726\Documents\My FME Workspaces\minecraft-stl.fmw"
+#          --DestDataset_MINECRAFT "C:\minecraft-stl"
+#          --SourceDataset_GEOJSON "C:\minecraft-stl\Water_Bdy.geojson"
+#          --SourceDataset_SHAPE "C:\minecraft-stl\Soil_Survey.shp"
+#          --SourceDataset_ARCVIEWGRID "C:\minecraft-stl\resample"
+#    
+#    
+#! END_PYTHON=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! REDIRECT_TERMINATORS="NONE"
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! MAX_LOG_FEATURES="200"
+#! LAST_SAVE_BUILD="FME(R) 2015.1.0.2 (20150525 - Build 15482 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_FILE=""
+#! CATEGORY=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! LOG_MAX_PRECISION="Yes"
+#! BEGIN_PYTHON=""
+#! LAST_SAVE_DATE="2015-05-31T00:32:08"
+#! WORKSPACE_VERSION="1"
+#! USAGE=""
+#! HISTORY=""
+#! SOURCE_ROUTING_FILE=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DOC_EXTENTS="3354.04 730.502"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! FME_BUILD_NUM="15482"
+#! FME_DOCUMENT_PRIORGUID="dee83f32-b171-42e7-b2d1-d0e7deac8cc6,6d59c7a1-9ce3-48dc-91ce-ccf3f7a7e203,3930844b-f338-4a0f-a242-e2d330943fff,4c3d7cfc-80be-42d3-9b4d-3b80daffd575,61503d89-fdc7-43d2-89f6-274975ea5401,6b6088af-f35b-43cb-95e8-b2989f6bb3ed,db9e3282-219b-491a-9c24-af11263052a0,903b9b95-ec47-4072-906e-a7e195ce4f33,88c8f05a-a694-4c66-91be-2d19621ec8bb,eba05397-2348-4bfd-8026-87d4b059862a,8b55000c-e048-4742-9f1a-877adc06150c,1b5d5182-d454-4b2f-861f-b1abe4a09241"
+#! DESTINATION_ROUTING_FILE=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! BEGIN_TCL=""
+#! VIEW_POSITION="774.008 15.0002"
+#! PASSWORD=""
+#! ZOOM_SCALE="100"
+#! SOURCE="NONE"
+#! FME_DOCUMENT_GUID="a9e3025a-9b5e-4ee6-b895-101a07754f1a"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! SHOW_ANNOTATIONS="true"
+#! TITLE=""
+#! SHOW_INFO_NODES="true"
+#! DESTINATION="NONE"
+#! IGNORE_READER_FAILURE="No"
+#! LEGAL_TERMS_CONDITIONS=""
+#! DESCRIPTION=""
+#! DOC_TOP_LEFT="39.9994 -760.502"
+#! REQUIREMENTS_KEYWORD=""
+#! REQUIREMENTS=""
+#! END_TCL=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GEOJSON"
+#! DATASET="$(SourceDataset_GEOJSON)"
+#! KEYWORD="GEOJSON_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="multi_reader_keyword string fme_basename string fme_sweep_angle float fme_type string fme_geometry fme_char(50) fme_text_size float fme_fill_color string fme_primary_axis float fme_text_string string multi_reader_id int multi_reader_full_id int fme_color string multi_reader_type string fme_dataset string fme_feature_type string fme_start_angle float fme_secondary_axis float fme_rotation float"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILE_OR_URL"
+#! GENERATE_FME_BUILD_NUM="15482"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! START_FEATURE=""
+#! MAX_FEATURES=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a name for the GeoJSON file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the GeoJSON file(s) or type the GeoJSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GEOJSON_IN_SEARCH_ENVELOPE_MINX GEOJSON_IN_SEARCH_ENVELOPE_MINY GEOJSON_IN_SEARCH_ENVELOPE_MAXX GEOJSON_IN_SEARCH_ENVELOPE_MAXY GEOJSON_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="SHAPE"
+#! DATASET="$(SourceDataset_SHAPE)"
+#! KEYWORD="SHAPE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="SHAPE_GEOMETRY {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="multi_reader_keyword char(50) fme_basename char(50) fme_sweep_angle number(31,15) fme_type char(50) fme_geometry fme_char(50) fme_text_size number(31,15) fme_fill_color char(50) shape_geometry_error{} char(254) fme_primary_axis number(31,15) shape_measures char(254) fme_text_string char(50) multi_reader_id number(11,0) multi_reader_full_id number(11,0) fme_color char(50) multi_reader_type char(50) fme_dataset char(50) fme_feature_type char(50) fme_start_angle number(31,15) fme_secondary_axis number(31,15) fme_rotation number(31,15)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES="INDEX"
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15482"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! START_FEATURE=""
+#! MAX_FEATURES=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the Esri Shape file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="shp file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Shape File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the Esri Shape file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="SHAPE_IN_SEARCH_ENVELOPE_MINX SHAPE_IN_SEARCH_ENVELOPE_MINY SHAPE_IN_SEARCH_ENVELOPE_MAXX SHAPE_IN_SEARCH_ENVELOPE_MAXY SHAPE_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM SHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="ARCVIEWGRID"
+#! DATASET="$(SourceDataset_ARCVIEWGRID)"
+#! KEYWORD="ARCVIEWGRID_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="multi_reader_keyword char(50) fme_basename char(50) fme_sweep_angle float fme_type char(50) fme_geometry fme_char(50) fme_text_size float fme_fill_color char(50) fme_primary_axis float fme_text_string char(50) multi_reader_id integer multi_reader_full_id integer fme_color char(50) multi_reader_type char(50) fme_dataset char(50) fme_feature_type char(50) fme_start_angle float fme_secondary_axis float fme_rotation float arcviewgrid_type char(255)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="DIRONLY"
+#! GENERATE_FME_BUILD_NUM="15482"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! COORDSYS=""
+#! START_FEATURE=""
+#! MAX_FEATURES=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="READER_AUTO_EXPOSE"
+#! VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="adf file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Raster"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Specify a folder for the Esri ArcGIS Binary Grid (AIG) file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="AUTO_FANOUT_ATTRIBUTE"
+#! VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINX ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINY ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXX ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXY ARCVIEWGRID_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="MINECRAFT"
+#! DATASET="$(DestDataset_MINECRAFT)"
+#! KEYWORD="MINECRAFT_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="false"
+#! EXPOSABLE_ATTRS="minecraft_center_point_cloud string fme_basename string fme_sweep_angle double fme_type string fme_geometry fme_char(50) fme_text_size double fme_fill_color string fme_primary_axis double fme_text_string string minecraft_world_name string fme_color string minecraft_fill_under string minecraft_populate_terrain string minecraft_fill_block short fme_dataset string minecraft_generator_seed long minecraft_generator_options string minecraft_generator_name string fme_start_angle double fme_feature_type string minecraft_type string fme_secondary_axis double fme_rotation double"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15482"
+#! COORDSYS=""
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_PREFIX=""
+#! FANOUT_DIRECTORY=""
+#! FANOUT="No"
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the Minecraft World"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_AUTO_EXPOSE"
+#! VALUE="fme_basename string"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="World1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="World"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="AUTO_FANOUT_ATTRIBUTE"
+#! VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="MINECRAFT_OUT_FILL_BLOCK"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(254)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="decimal(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="object"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="object_or_array"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(254)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="SHAPE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_time"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_date"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="long"
+#! FME_TYPE="fme_int64"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="short"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="byte"
+#! FME_TYPE="fme_int16"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="string"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="long"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="short"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="short"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="byte"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="MINECRAFT"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="arcviewgrid_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="arcviewgrid_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_point"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_text"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_line"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_arc"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_area"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_surface"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_solid"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="arcviewgrid_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="ARCVIEWGRID"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_rectangle"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_rounded_rectangle"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_line"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="json_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_pointz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_pointm"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_multipointz"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_multipointm"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polylinez"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polylinem"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonm"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_pointz"
+#! FME_TYPE="fme_text"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polylinez"
+#! FME_TYPE="fme_arc"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_null"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_raster"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_polygonz"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="shape_null"
+#! FME_TYPE="fme_collection"
+#! FORMAT="SHAPE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="minecraft_point_cloud"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_point"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_text"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_line"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_arc"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_area"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_raster"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_collection"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_solid"
+#! FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_surface"
+#! FORMAT="MINECRAFT"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="Street_Centerlines"
+#! FEATURE_TYPE_NAME="@Value(fme_basename)"
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="fme_no_map"
+#! POSITION="3394.04 -375.003"
+#! BOUNDING_RECT="3394.04 -375.003 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="MINECRAFT_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="SDEDBO.Water_Bdy"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="7"
+#! FEAT_GEOMTYPE="json_line"
+#! POSITION="100 -230"
+#! BOUNDING_RECT="100 -230 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="GEOJSON_1"
+#! PARMS_EDITED="true"
+#! ENABLED="false"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="IGDS_LAYER" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.len" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IGDS_LEVEL" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="Soil_Survey"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="11"
+#! FEAT_GEOMTYPE="shape_polygonz"
+#! POSITION="100 -449"
+#! BOUNDING_RECT="100 -449 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="SHAPE_1"
+#! PARMS_EDITED="true"
+#! ENABLED="false"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="PRIMFML" ATTR_TYPE="number(20,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="STSSAID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE_len" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MUSYM" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MUNAME" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SSAID" ATTR_TYPE="number(20,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MLRA" ATTR_TYPE="number(20,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MUKIND" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MUACRES" ATTR_TYPE="number(20,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MUID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="ARCVIEWGRID"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="27"
+#! FEAT_GEOMTYPE="arcviewgrid_raster"
+#! POSITION="39.9994 -587"
+#! BOUNDING_RECT="39.9994 -587 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="ARCVIEWGRID_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="" ATTR_TYPE="" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:"
+#! DEFAULT_VALUE="C:\minecraft-stl"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:"
+#! DEFAULT_VALUE="C:\minecraft-stl\Water_Bdy.geojson"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_SHAPE Shape_Files(*.shp)|*.shp|Compressed_Shape_Files(*.shz)|*.shz|All_Files(*)|* Source Esri Shape File(s):"
+#! DEFAULT_VALUE="C:\minecraft-stl\Soil_Survey.shp"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME_SRC SourceDataset_ARCVIEWGRID Source Esri ArcGIS Binary Grid (AIG) Folder:"
+#! DEFAULT_VALUE="C:\minecraft-stl\resample"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="4"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Reader Feature Types&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="100 -30"
+#! TOP_LEFT="100 -30"
+#! BOTTOM_RIGHT="99 -29"
+#! BOUNDING_RECT="100 -30 -1 -1"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="SOURCE_HEADER"
+#! ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#! IDENTIFIER="5"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Data Flow&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="1437.51 -30"
+#! TOP_LEFT="1437.51 -30"
+#! BOTTOM_RIGHT="1436.51 -29"
+#! BOUNDING_RECT="1437.51 -30 -1 -1"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#! IDENTIFIER="6"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Writer Feature Types&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="2613.03 -30"
+#! TOP_LEFT="2613.03 -30"
+#! BOTTOM_RIGHT="2612.03 -29"
+#! BOUNDING_RECT="2613.03 -30 -1 -1"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="DEST_HEADER"
+#! ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="RasterPropertyExtractor"
+#! VERSION="1"
+#! POSITION="614.506 -760.502"
+#! BOUNDING_RECT="614.506 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="RasterPropertyExtractor"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="13"
+#! TYPE="RasterGeoreferencer"
+#! VERSION="4"
+#! POSITION="1168.51 -760.502"
+#! BOUNDING_RECT="1168.51 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ROTATION" PARM_VALUE="0.0"/>
+#! <XFORM_PARM PARM_NAME="X_LR_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="RasterGeoreferencer"/>
+#! <XFORM_PARM PARM_NAME="Y_SPACING" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="Y_LR_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="X_UL_COORD" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="Y_UL_COORD" PARM_VALUE="@Value(_num_rows)"/>
+#! <XFORM_PARM PARM_NAME="POINTANDANGLE_OR_EXTENTS" PARM_VALUE="PointAndAngle"/>
+#! <XFORM_PARM PARM_NAME="X_UR_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="X_LL_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="X_SPACING" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="Y_UR_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="Y_LL_COORD" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="15"
+#! TYPE="RasterExpressionEvaluator"
+#! VERSION="2"
+#! POSITION="1698.51 -760.502"
+#! BOUNDING_RECT="1698.51 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="RasterExpressionEvaluator"/>
+#! <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="One Raster"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION_LIST" PARM_VALUE="INTERPRETATION_LIST &quot;PRESERVE&quot; EXPRESSION_LIST &quot;63+&lt;openparen&gt;A&lt;openbracket&gt;0&lt;closebracket&gt;*192&lt;solidus&gt;1095&lt;closeparen&gt;&quot;"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="17"
+#! TYPE="PointCloudCombiner"
+#! VERSION="2"
+#! POSITION="2252.51 -760.502"
+#! BOUNDING_RECT="2252.51 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner"/>
+#! <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="20"
+#! TYPE="SubDocumentTransformer"
+#! VERSION="0"
+#! POSITION="2782.51 -760.502"
+#! BOUNDING_RECT="2782.51 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="Styled"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUB_DOC_NAME" PARM_VALUE="MinecraftStyler"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="MinecraftStyler_2"/>
+#! <XFORM_PARM PARM_NAME="MINECRAFTBLOCK" PARM_VALUE="031_01"/>
+#! <XFORM_PARM PARM_NAME="VERTICALOFFSET" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="SubDocumentTransformer"
+#! VERSION="0"
+#! POSITION="2810.53 -511.499"
+#! BOUNDING_RECT="2810.53 -511.499 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="Styled"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUB_DOC_NAME" PARM_VALUE="MinecraftStyler"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="MinecraftStyler"/>
+#! <XFORM_PARM PARM_NAME="MINECRAFTBLOCK" PARM_VALUE="003_00"/>
+#! <XFORM_PARM PARM_NAME="VERTICALOFFSET" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="22"
+#! TYPE="PointCloudCombiner"
+#! VERSION="2"
+#! POSITION="3340.53 -760.502"
+#! BOUNDING_RECT="3340.53 -760.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15482"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_bands" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_rows" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_num_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_spacing_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_rotation_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_cell_origin_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_upper_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_right_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lower_left_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner_2"/>
+#! <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="14"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="13"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="17"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="23"
+#! SOURCE_NODE="17"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="20"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="22"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! <SUBDOCUMENT
+#! NAME="MinecraftStyler_2"
+#! SUPPRESS_UPGRADE="false"
+#! XFORM_DEPRECATED="No"
+#! LEGAL_TERMS_CONDITIONS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! DOC_DYNAMIC_INPUT_ATTRS="0"
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! REQUIREMENTS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! CATEGORY="Stylers"
+#! DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sets Minecraft blockID and blockData &lt;/p&gt;&#10;"
+#! USAGE="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! IS_VISIBLE="false"
+#! FME_DOCUMENT_PRIORGUID="1a21299d-93de-4ca8-96c2-1c5024a6b9a3"
+#! TITLE="MinecraftStyler_2"
+#! HISTORY=""
+#! REQUIREMENTS_KEYWORD="none"
+#! ZOOM_SCALE="100"
+#! DOC_TOP_LEFT="-344 -1863"
+#! VIEW_POSITION="-387.004 -861.009"
+#! FME_PROCESS_GROUP_BY=""
+#! DOC_EXTENTS="4988 552"
+#! FME_DOCUMENT_GUID="9fb8852c-a505-4488-af6b-e8915f2affb9"
+#! FME_PROCESS_GROUPS_ORDERED="No"
+#! >
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR MINECRAFTBLOCK Stone,001_00%Granite,001_01%Polished&lt;space&gt;Granite,001_02%Diorite,001_03%Polished&lt;space&gt;Diorite,001_04%Andesite,001_05%Polished&lt;space&gt;Andesite,001_06%Grass&lt;space&gt;Block,002%Dirt,003_00%Coarse&lt;space&gt;Dirt,003_01%Podzol,003_02%Cobblestone,004%Oak&lt;space&gt;Wood&lt;space&gt;Planks,005_00%Spruce&lt;space&gt;Wood&lt;space&gt;Planks,005_01%Birch&lt;space&gt;Wood&lt;space&gt;Planks,005_02%Jungle&lt;space&gt;Wood&lt;space&gt;Planks,005_03%Acacia&lt;space&gt;Wood&lt;space&gt;Planks,005_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Planks,005_05%Oak&lt;space&gt;Sapling,006_00%Spruce&lt;space&gt;Sapling,006_01%Birch&lt;space&gt;Sapling,006_02%Jungle&lt;space&gt;Sapling,006_03%Acacia&lt;space&gt;Sapling,006_04%Dark&lt;space&gt;Oak&lt;space&gt;Sapling,006_05%Bedrock,007%Flowing&lt;space&gt;Water,008%Still&lt;space&gt;Water,009%Flowing&lt;space&gt;Lava,010%Still&lt;space&gt;Lava,011%Sand,012_00%Red&lt;space&gt;Sand,012_01%Gravel,013%Gold&lt;space&gt;Ore,014%Iron&lt;space&gt;Ore,015%Coal&lt;space&gt;Ore,016%Oak&lt;space&gt;Wood,017_00%Spruce&lt;space&gt;Wood,017_01%Birch&lt;space&gt;Wood,017_02%Jungle&lt;space&gt;Wood,017_03%Acacia&lt;space&gt;Wood,017_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood,017_05%Oak&lt;space&gt;Leaves,018_00%Spruce&lt;space&gt;Leaves,018_01%Birch&lt;space&gt;Leaves,018_02%Jungle&lt;space&gt;Leaves,018_03%Sponge,019_00%Sponge,019_01%Glass,020%Lapis&lt;space&gt;Lazuli&lt;space&gt;Ore,021%Lapis&lt;space&gt;Lazuli&lt;space&gt;Block,022%Dispenser,023%Sandstone,024_00%Chiseled&lt;space&gt;Sandstone,024_01%Smooth&lt;space&gt;Sandstone,024_02%Note&lt;space&gt;Block,025%Powered&lt;space&gt;Rail,027%Detector&lt;space&gt;Rail,028%Sticky&lt;space&gt;Piston,029%Cobweb,030%Shrub,031_00%Grass,031_01%Fern,031_02%Dead&lt;space&gt;Bush,032%Piston,033%White&lt;space&gt;Wool,035_00%Orange&lt;space&gt;Wool,035_01%Magenta&lt;space&gt;Wool,035_02%Light&lt;space&gt;Blue&lt;space&gt;Wool,035_03%Yellow&lt;space&gt;Wool,035_04%Lime&lt;space&gt;Wool,035_05%Pink&lt;space&gt;Wool,035_06%Gray&lt;space&gt;Wool,035_07%Light&lt;space&gt;Gray&lt;space&gt;Wool,035_08%Cyan&lt;space&gt;Wool,035_09%Purple&lt;space&gt;Wool,035_10%Blue&lt;space&gt;Wool,035_11%Brown&lt;space&gt;Wool,035_12%Green&lt;space&gt;Wool,035_13%Red&lt;space&gt;Wool,035_14%Black&lt;space&gt;Wool,035_15%Dandelion,037%Poppy,038_00%Blue&lt;space&gt;Orchid,038_01%Allium,038_02%Azure&lt;space&gt;Bluet,038_03%Red&lt;space&gt;Tulip,038_04%Orange&lt;space&gt;Tulip,038_05%White&lt;space&gt;Tulip,038_06%Pink&lt;space&gt;Tulip,038_07%Oxeye&lt;space&gt;Daisy,038_08%Brown&lt;space&gt;Mushroom,039%Red&lt;space&gt;Mushroom,040%Block&lt;space&gt;of&lt;space&gt;Gold,041%Block&lt;space&gt;of&lt;space&gt;Iron,042%Double&lt;space&gt;Stone&lt;space&gt;Slab,043_00%Double&lt;space&gt;Sandstone&lt;space&gt;Sla,043_01%Double&lt;space&gt;Wooden&lt;space&gt;Slab,043_02%Double&lt;space&gt;Cobblestone&lt;space&gt;S,043_03%Double&lt;space&gt;Bricks&lt;space&gt;Slab,043_04%Double&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;S,043_05%Double&lt;space&gt;Nether&lt;space&gt;Brick&lt;space&gt;,043_06%Double&lt;space&gt;Quartz&lt;space&gt;Slab,043_07%Full&lt;space&gt;Stone&lt;space&gt;Slab,043_08%Full&lt;space&gt;Sandstone&lt;space&gt;Slab,043_09%Stone&lt;space&gt;Slab,044_00%Sandstone&lt;space&gt;Slab,044_01%Wooden&lt;space&gt;Slab,044_02%Cobblestone&lt;space&gt;Slab,044_03%Bricks&lt;space&gt;Slab,044_04%Stone&lt;space&gt;Bricks&lt;space&gt;Slab,044_05%Nether&lt;space&gt;Brick&lt;space&gt;Slab,044_06%Quartz&lt;space&gt;Slab,044_07%Bricks,045%TNT,046%Bookshelf,047%Moss&lt;space&gt;Stone,048%Obsidian,049%Torch,050%Fire,051%Monster&lt;space&gt;Spawner,052%Oak&lt;space&gt;Wood&lt;space&gt;Stairs,053%Chest,054%Diamond&lt;space&gt;Ore,056%Block&lt;space&gt;of&lt;space&gt;Diamond,057%Crafting&lt;space&gt;Table,058%Farmland,060%Furnace,061%Lit&lt;space&gt;Furnace,062%Ladder,065%Rail,066%Cobblestone&lt;space&gt;Stairs,067%Lever,069%Stone&lt;space&gt;Pressure&lt;space&gt;Plate,070%Wooden&lt;space&gt;Pressure&lt;space&gt;Plat,072%Redstone&lt;space&gt;Ore,073%Redstone&lt;space&gt;Torch,076%Stone&lt;space&gt;Button,077%Snow&lt;space&gt;&lt;openparen&gt;cover&lt;closeparen&gt;,078%Ice,079%Snow,080%Cactus,081%Clay&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,082%Jukebox,084%Fence,085%Pumpkin,086%Netherrack,087%Soul&lt;space&gt;Sand,088%Glowstone,089%Portal,090%Jack&lt;space&gt;o&lt;apos&gt;Lantern,091%White&lt;space&gt;Stained&lt;space&gt;Glass,095_00%Orange&lt;space&gt;Stained&lt;space&gt;Glass,095_01%Magenta&lt;space&gt;Stained&lt;space&gt;Glas,095_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;G,095_03%Yellow&lt;space&gt;Stained&lt;space&gt;Glass,095_04%Lime&lt;space&gt;Stained&lt;space&gt;Glass,095_05%Pink&lt;space&gt;Stained&lt;space&gt;Glass,095_06%Gray&lt;space&gt;Stained&lt;space&gt;Glass,095_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;G,095_08%Cyan&lt;space&gt;Stained&lt;space&gt;Glass,095_09%Purple&lt;space&gt;Stained&lt;space&gt;Glass,095_10%Blue&lt;space&gt;Stained&lt;space&gt;Glass,095_11%Brown&lt;space&gt;Stained&lt;space&gt;Glass,095_12%Green&lt;space&gt;Stained&lt;space&gt;Glass,095_13%Red&lt;space&gt;Stained&lt;space&gt;Glass,095_14%Black&lt;space&gt;Stained&lt;space&gt;Glass,095_15%Trapdoor,096%Stone&lt;space&gt;Monster&lt;space&gt;Egg,097_00%Cobblestone&lt;space&gt;Monster&lt;space&gt;,097_01%Stone&lt;space&gt;Brick&lt;space&gt;Monster&lt;space&gt;,097_02%Mossy&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;Mo,097_03%Cracked&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;,097_04%Chiseled&lt;space&gt;Stone&lt;space&gt;Brick,097_05%Stone&lt;space&gt;Bricks,098_00%Mossy&lt;space&gt;Stone&lt;space&gt;Bricks,098_01%Cracked&lt;space&gt;Stone&lt;space&gt;Bricks,098_02%Chiseled&lt;space&gt;Stone&lt;space&gt;Brick,098_03%Huge&lt;space&gt;Brown&lt;space&gt;Mushroom,099%Huge&lt;space&gt;Red&lt;space&gt;Mushroom,100%Iron&lt;space&gt;Bars,101%Glass&lt;space&gt;Pane,102%Melon&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,103%Vines,106%Fence&lt;space&gt;Gate,107%Brick&lt;space&gt;Stairs,108%Stone&lt;space&gt;Brick&lt;space&gt;Stairs,109%Mycelium,110%Lily&lt;space&gt;Pad,111%Nether&lt;space&gt;Brick,112%Nether&lt;space&gt;Brick&lt;space&gt;Fence,113%Nether&lt;space&gt;Brick&lt;space&gt;Stairs,114%Enchantment&lt;space&gt;Table,116%End&lt;space&gt;Portal&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,120%End&lt;space&gt;Stone,121%Dragon&lt;space&gt;Egg,122%Redstone&lt;space&gt;Lamp,123%Double&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Slab,125_00%Double&lt;space&gt;Spruce&lt;space&gt;Wood&lt;space&gt;S,125_01%Double&lt;space&gt;Birch&lt;space&gt;Wood&lt;space&gt;Sl,125_02%Double&lt;space&gt;Jungle&lt;space&gt;Wood&lt;space&gt;S,125_03%Double&lt;space&gt;Acacia&lt;space&gt;Wood&lt;space&gt;S,125_04%Double&lt;space&gt;Dark&lt;space&gt;Oak&lt;space&gt;Wood,125_05%Oak&lt;space&gt;Wood&lt;space&gt;Slab,126_00%Spruce&lt;space&gt;Wood&lt;space&gt;Slab,126_01%Birch&lt;space&gt;Wood&lt;space&gt;Slab,126_02%Jungle&lt;space&gt;Wood&lt;space&gt;Slab,126_03%Acacia&lt;space&gt;Wood&lt;space&gt;Slab,126_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Slab,126_05%Sandstone&lt;space&gt;Stairs,128%Emereld&lt;space&gt;Ore,129%Ender&lt;space&gt;Chest,130%Tripwire&lt;space&gt;Hook,131%Block&lt;space&gt;of&lt;space&gt;Emereld,133%Spruce&lt;space&gt;Wood&lt;space&gt;Stairs&lt;space&gt;,134%Birch&lt;space&gt;Wood&lt;space&gt;Stairs,135%Jungle&lt;space&gt;Wood&lt;space&gt;Stairs,136%Command&lt;space&gt;Block,137%Beacon,138%Cobblestone&lt;space&gt;Wall,139_00%Mossy&lt;space&gt;Cobblestone&lt;space&gt;Wa,139_01%Wooden&lt;space&gt;Button,143%Anvil,145_00%Slightly&lt;space&gt;Damaged&lt;space&gt;Anv,145_01%Very&lt;space&gt;Damaged&lt;space&gt;Anvil,145_02%Trapped&lt;space&gt;Chest,146%Weighted&lt;space&gt;Pressure&lt;space&gt;Pl,147%Weighted&lt;space&gt;Pressure&lt;space&gt;Pl,148%Daylight&lt;space&gt;Sensor,151%Block&lt;space&gt;of&lt;space&gt;Redstone,152%Nether&lt;space&gt;Quartz&lt;space&gt;Ore,153%Hopper,154%Block&lt;space&gt;of&lt;space&gt;Quartz,155_00%Chiseled&lt;space&gt;Quartz&lt;space&gt;Bloc,155_01%Pillar&lt;space&gt;Quartz&lt;space&gt;Block,155_02%Quartz&lt;space&gt;Stairs,156%Activator&lt;space&gt;Rail,157%Dropper,158%White&lt;space&gt;Stained&lt;space&gt;Clay,159_00%Orange&lt;space&gt;Stained&lt;space&gt;Clay,159_01%Magenta&lt;space&gt;Stained&lt;space&gt;Clay,159_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;C,159_03%Yellow&lt;space&gt;Stained&lt;space&gt;Clay,159_04%Lime&lt;space&gt;Stained&lt;space&gt;Clay,159_05%Pink&lt;space&gt;Stained&lt;space&gt;Clay,159_06%Gray&lt;space&gt;Stained&lt;space&gt;Clay,159_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;C,159_08%Cyan&lt;space&gt;Stained&lt;space&gt;Clay,159_09%Purple&lt;space&gt;Stained&lt;space&gt;Clay,159_10%Blue&lt;space&gt;Stained&lt;space&gt;Clay,159_11%Brown&lt;space&gt;Stained&lt;space&gt;Clay,159_12%Green&lt;space&gt;Stained&lt;space&gt;Clay,159_13%Red&lt;space&gt;Stained&lt;space&gt;Clay,159_14%Black&lt;space&gt;Stained&lt;space&gt;Clay,159_15%White&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_00%Orange&lt;space&gt;Stained&lt;space&gt;Glass,160_01%Magenta&lt;space&gt;Stained&lt;space&gt;Glas,160_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;G,160_03%Yellow&lt;space&gt;Stained&lt;space&gt;Glass,160_04%Lime&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_05%Pink&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_06%Gray&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;G,160_08%Cyan&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_09%Purple&lt;space&gt;Stained&lt;space&gt;Glass,160_10%Blue&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_11%Brown&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_12%Green&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_13%Red&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;Pa,160_14%Black&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_15%Acacia&lt;space&gt;Leaves,161_00%Dark&lt;space&gt;Oak&lt;space&gt;Leaves,161_01%Acacia&lt;space&gt;Wood,162_00%Dark&lt;space&gt;Oak&lt;space&gt;Wood,162_01%Acacia&lt;space&gt;Wood&lt;space&gt;Stairs,163%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Stairs,164%Slime&lt;space&gt;Block,165%Barrier,166%Iron&lt;space&gt;Trapdoor,167%Prismarine,168_00%Prismarine&lt;space&gt;Bricks,168_01%Dark&lt;space&gt;Prismarine,168_02%Sea&lt;space&gt;Lantern,169%Hay&lt;space&gt;Bale,170%White&lt;space&gt;Carpet,171_00%Orange&lt;space&gt;Carpet,171_01%Magenta&lt;space&gt;Carpet,171_02%Light&lt;space&gt;Blue&lt;space&gt;Carpet,171_03%Yellow&lt;space&gt;Carpet,171_04%Lime&lt;space&gt;Carpet,171_05%Pink&lt;space&gt;Carpet,171_06%Gray&lt;space&gt;Carpet,171_07%Light&lt;space&gt;Gray&lt;space&gt;Carpet,171_08%Cyan&lt;space&gt;Carpet,171_09%Purple&lt;space&gt;Carpet,171_10%Blue&lt;space&gt;Carpet,171_11%Brown&lt;space&gt;Carpet,171_12%Green&lt;space&gt;Carpet,171_13%Red&lt;space&gt;Carpet,171_14%Black&lt;space&gt;Carpet,171_15%Hardened&lt;space&gt;Clay,172%Block&lt;space&gt;of&lt;space&gt;Coal,173%Packed&lt;space&gt;Ice,174%Sunflower,175_00%Lilac,175_01%Double&lt;space&gt;Tallgrass,175_02%Large&lt;space&gt;Fern,175_03%Rose&lt;space&gt;Bush,175_04%Peony,175_05%Red&lt;space&gt;Sandstone,179_00%Chiseled&lt;space&gt;Red&lt;space&gt;Sandsto,179_01%Smooth&lt;space&gt;Red&lt;space&gt;Sandstone,179_02%Red&lt;space&gt;Sandstone&lt;space&gt;Stairs,180%Red&lt;space&gt;Sandstone&lt;space&gt;Slab,182%Spruce&lt;space&gt;Fence&lt;space&gt;Gate,183%Birch&lt;space&gt;Fence&lt;space&gt;Gate,184%Jungle&lt;space&gt;Fence&lt;space&gt;Gate,185%Dark&lt;space&gt;Oak&lt;space&gt;Fence&lt;space&gt;Gate,186%Acacia&lt;space&gt;Fence&lt;space&gt;Gate,187%Spruce&lt;space&gt;Fence,188%Birch&lt;space&gt;Fence,189%Jungle&lt;space&gt;Fence,190%Dark&lt;space&gt;Oak&lt;space&gt;Fence,191%Acacia&lt;space&gt;Fence,192 Minecraft blockID:"
+#! DEFAULT_VALUE="001_00"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL INTEGER_OR_ATTR VERTICALOFFSET Vertical Offset:"
+#! DEFAULT_VALUE="0"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="1204 -1794"
+#! BOUNDING_RECT="1204 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="MinecraftBlock,$(MINECRAFTBLOCK)"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="AttributeSplitter"
+#! VERSION="3"
+#! POSITION="1720 -1794"
+#! BOUNDING_RECT="1720 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="_"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter"/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="MinecraftBlock"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2236 -1794"
+#! BOUNDING_RECT="2236 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="blockID,&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;,blockData,&quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;-1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST _list&lt;opencurly&gt;1&lt;closecurly&gt; NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;1&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="AttributeRemover"
+#! VERSION="1"
+#! POSITION="2752 -1794"
+#! BOUNDING_RECT="2752 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRemover"/>
+#! <XFORM_PARM PARM_NAME="REMOVE_ATTRS" PARM_VALUE="MinecraftBlock"/>
+#! <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE="_list&lt;opencurly&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="GeometryFilter"
+#! VERSION="6"
+#! POSITION="688 -1587"
+#! BOUNDING_RECT="688 -1587 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="POINTCLOUD"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GeometryFilter"/>
+#! <XFORM_PARM PARM_NAME="GEOM_PORT_NAMES" PARM_VALUE="Pointcloud"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INSTANTIATE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="BREAK_AGG" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="PointCloudComponentRemover"
+#! VERSION="0"
+#! POSITION="1204 -1518"
+#! BOUNDING_RECT="1204 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentRemover"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE" PARM_VALUE="blockID,blockData,vertical_offset"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="PointCloudComponentAdder"
+#! VERSION="0"
+#! POSITION="3784 -1311"
+#! BOUNDING_RECT="3784 -1311 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD" PARM_VALUE="blockID,UInt16,&lt;at&gt;Value&lt;openparen&gt;blockID&lt;closeparen&gt;,blockData,UInt8,&lt;at&gt;Value&lt;openparen&gt;blockData&lt;closeparen&gt;,vertical_offset,Int8,&lt;at&gt;Value&lt;openparen&gt;_vertical_offset&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentAdder"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="1720 -1518"
+#! BOUNDING_RECT="1720 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="MinecraftBlock {$(MINECRAFTBLOCK)}"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="AttributeSplitter"
+#! VERSION="3"
+#! POSITION="2236 -1518"
+#! BOUNDING_RECT="2236 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="_"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter_2"/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="MinecraftBlock"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2752 -1518"
+#! BOUNDING_RECT="2752 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="blockID,&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;,blockData,&quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;_FME_NO_OP_&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST _list&lt;opencurly&gt;1&lt;closecurly&gt; NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;1&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="11"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="172 -1587"
+#! BOUNDING_RECT="172 -1587 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_vertical_offset {$(VERTICALOFFSET)}"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="Tester"
+#! VERSION="2"
+#! POSITION="3268 -1449"
+#! BOUNDING_RECT="3268 -1449 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="PASSED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST blockData NOT_ATTRIBUTE_IS_MISSING &quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="13"
+#! TYPE="PointCloudComponentAdder"
+#! VERSION="0"
+#! POSITION="3784 -1656"
+#! BOUNDING_RECT="3784 -1656 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD" PARM_VALUE="blockID,UInt16,&lt;at&gt;Value&lt;openparen&gt;blockID&lt;closeparen&gt;,vertical_offset,Int8,&lt;at&gt;Value&lt;openparen&gt;_vertical_offset&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentAdder_2"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="14"
+#! NAME="Styled"
+#! POSITION="4644 -1863"
+#! BOUNDING_RECT="4644 -1863 -1 -1"
+#! COLLAPSED="true"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="15"
+#! NAME="Input"
+#! POSITION="-344 -1587"
+#! BOUNDING_RECT="-344 -1587 -1 -1"
+#! COLLAPSED="true"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="19"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="23"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="27"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="29"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="30"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="13"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="31"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! </SUBDOCUMENT>
+#! <SUBDOCUMENT
+#! NAME="MinecraftStyler"
+#! SUPPRESS_UPGRADE="false"
+#! XFORM_DEPRECATED="No"
+#! LEGAL_TERMS_CONDITIONS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! DOC_DYNAMIC_INPUT_ATTRS="0"
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! REQUIREMENTS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! CATEGORY="Stylers"
+#! DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sets Minecraft blockID and blockData &lt;/p&gt;&#10;"
+#! IS_VISIBLE="false"
+#! FME_DOCUMENT_PRIORGUID="1a21299d-93de-4ca8-96c2-1c5024a6b9a3"
+#! USAGE="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! TITLE="MinecraftStyler"
+#! HISTORY=""
+#! REQUIREMENTS_KEYWORD="none"
+#! ZOOM_SCALE="100"
+#! DOC_TOP_LEFT="-344 -1863"
+#! GUID="9fb8852c-a505-4488-af6b-e8915f2affb9"
+#! VIEW_POSITION="-387.004 -861.009"
+#! FME_PROCESS_GROUP_BY=""
+#! DOC_EXTENTS="4988 552"
+#! FME_DOCUMENT_GUID="9fb8852c-a505-4488-af6b-e8915f2affb9"
+#! FME_PROCESS_GROUPS_ORDERED="No"
+#! >
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR MINECRAFTBLOCK Stone,001_00%Granite,001_01%Polished&lt;space&gt;Granite,001_02%Diorite,001_03%Polished&lt;space&gt;Diorite,001_04%Andesite,001_05%Polished&lt;space&gt;Andesite,001_06%Grass&lt;space&gt;Block,002%Dirt,003_00%Coarse&lt;space&gt;Dirt,003_01%Podzol,003_02%Cobblestone,004%Oak&lt;space&gt;Wood&lt;space&gt;Planks,005_00%Spruce&lt;space&gt;Wood&lt;space&gt;Planks,005_01%Birch&lt;space&gt;Wood&lt;space&gt;Planks,005_02%Jungle&lt;space&gt;Wood&lt;space&gt;Planks,005_03%Acacia&lt;space&gt;Wood&lt;space&gt;Planks,005_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Planks,005_05%Oak&lt;space&gt;Sapling,006_00%Spruce&lt;space&gt;Sapling,006_01%Birch&lt;space&gt;Sapling,006_02%Jungle&lt;space&gt;Sapling,006_03%Acacia&lt;space&gt;Sapling,006_04%Dark&lt;space&gt;Oak&lt;space&gt;Sapling,006_05%Bedrock,007%Flowing&lt;space&gt;Water,008%Still&lt;space&gt;Water,009%Flowing&lt;space&gt;Lava,010%Still&lt;space&gt;Lava,011%Sand,012_00%Red&lt;space&gt;Sand,012_01%Gravel,013%Gold&lt;space&gt;Ore,014%Iron&lt;space&gt;Ore,015%Coal&lt;space&gt;Ore,016%Oak&lt;space&gt;Wood,017_00%Spruce&lt;space&gt;Wood,017_01%Birch&lt;space&gt;Wood,017_02%Jungle&lt;space&gt;Wood,017_03%Acacia&lt;space&gt;Wood,017_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood,017_05%Oak&lt;space&gt;Leaves,018_00%Spruce&lt;space&gt;Leaves,018_01%Birch&lt;space&gt;Leaves,018_02%Jungle&lt;space&gt;Leaves,018_03%Sponge,019_00%Sponge,019_01%Glass,020%Lapis&lt;space&gt;Lazuli&lt;space&gt;Ore,021%Lapis&lt;space&gt;Lazuli&lt;space&gt;Block,022%Dispenser,023%Sandstone,024_00%Chiseled&lt;space&gt;Sandstone,024_01%Smooth&lt;space&gt;Sandstone,024_02%Note&lt;space&gt;Block,025%Powered&lt;space&gt;Rail,027%Detector&lt;space&gt;Rail,028%Sticky&lt;space&gt;Piston,029%Cobweb,030%Shrub,031_00%Grass,031_01%Fern,031_02%Dead&lt;space&gt;Bush,032%Piston,033%White&lt;space&gt;Wool,035_00%Orange&lt;space&gt;Wool,035_01%Magenta&lt;space&gt;Wool,035_02%Light&lt;space&gt;Blue&lt;space&gt;Wool,035_03%Yellow&lt;space&gt;Wool,035_04%Lime&lt;space&gt;Wool,035_05%Pink&lt;space&gt;Wool,035_06%Gray&lt;space&gt;Wool,035_07%Light&lt;space&gt;Gray&lt;space&gt;Wool,035_08%Cyan&lt;space&gt;Wool,035_09%Purple&lt;space&gt;Wool,035_10%Blue&lt;space&gt;Wool,035_11%Brown&lt;space&gt;Wool,035_12%Green&lt;space&gt;Wool,035_13%Red&lt;space&gt;Wool,035_14%Black&lt;space&gt;Wool,035_15%Dandelion,037%Poppy,038_00%Blue&lt;space&gt;Orchid,038_01%Allium,038_02%Azure&lt;space&gt;Bluet,038_03%Red&lt;space&gt;Tulip,038_04%Orange&lt;space&gt;Tulip,038_05%White&lt;space&gt;Tulip,038_06%Pink&lt;space&gt;Tulip,038_07%Oxeye&lt;space&gt;Daisy,038_08%Brown&lt;space&gt;Mushroom,039%Red&lt;space&gt;Mushroom,040%Block&lt;space&gt;of&lt;space&gt;Gold,041%Block&lt;space&gt;of&lt;space&gt;Iron,042%Double&lt;space&gt;Stone&lt;space&gt;Slab,043_00%Double&lt;space&gt;Sandstone&lt;space&gt;Sla,043_01%Double&lt;space&gt;Wooden&lt;space&gt;Slab,043_02%Double&lt;space&gt;Cobblestone&lt;space&gt;S,043_03%Double&lt;space&gt;Bricks&lt;space&gt;Slab,043_04%Double&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;S,043_05%Double&lt;space&gt;Nether&lt;space&gt;Brick&lt;space&gt;,043_06%Double&lt;space&gt;Quartz&lt;space&gt;Slab,043_07%Full&lt;space&gt;Stone&lt;space&gt;Slab,043_08%Full&lt;space&gt;Sandstone&lt;space&gt;Slab,043_09%Stone&lt;space&gt;Slab,044_00%Sandstone&lt;space&gt;Slab,044_01%Wooden&lt;space&gt;Slab,044_02%Cobblestone&lt;space&gt;Slab,044_03%Bricks&lt;space&gt;Slab,044_04%Stone&lt;space&gt;Bricks&lt;space&gt;Slab,044_05%Nether&lt;space&gt;Brick&lt;space&gt;Slab,044_06%Quartz&lt;space&gt;Slab,044_07%Bricks,045%TNT,046%Bookshelf,047%Moss&lt;space&gt;Stone,048%Obsidian,049%Torch,050%Fire,051%Monster&lt;space&gt;Spawner,052%Oak&lt;space&gt;Wood&lt;space&gt;Stairs,053%Chest,054%Diamond&lt;space&gt;Ore,056%Block&lt;space&gt;of&lt;space&gt;Diamond,057%Crafting&lt;space&gt;Table,058%Farmland,060%Furnace,061%Lit&lt;space&gt;Furnace,062%Ladder,065%Rail,066%Cobblestone&lt;space&gt;Stairs,067%Lever,069%Stone&lt;space&gt;Pressure&lt;space&gt;Plate,070%Wooden&lt;space&gt;Pressure&lt;space&gt;Plat,072%Redstone&lt;space&gt;Ore,073%Redstone&lt;space&gt;Torch,076%Stone&lt;space&gt;Button,077%Snow&lt;space&gt;&lt;openparen&gt;cover&lt;closeparen&gt;,078%Ice,079%Snow,080%Cactus,081%Clay&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,082%Jukebox,084%Fence,085%Pumpkin,086%Netherrack,087%Soul&lt;space&gt;Sand,088%Glowstone,089%Portal,090%Jack&lt;space&gt;o&lt;apos&gt;Lantern,091%White&lt;space&gt;Stained&lt;space&gt;Glass,095_00%Orange&lt;space&gt;Stained&lt;space&gt;Glass,095_01%Magenta&lt;space&gt;Stained&lt;space&gt;Glas,095_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;G,095_03%Yellow&lt;space&gt;Stained&lt;space&gt;Glass,095_04%Lime&lt;space&gt;Stained&lt;space&gt;Glass,095_05%Pink&lt;space&gt;Stained&lt;space&gt;Glass,095_06%Gray&lt;space&gt;Stained&lt;space&gt;Glass,095_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;G,095_08%Cyan&lt;space&gt;Stained&lt;space&gt;Glass,095_09%Purple&lt;space&gt;Stained&lt;space&gt;Glass,095_10%Blue&lt;space&gt;Stained&lt;space&gt;Glass,095_11%Brown&lt;space&gt;Stained&lt;space&gt;Glass,095_12%Green&lt;space&gt;Stained&lt;space&gt;Glass,095_13%Red&lt;space&gt;Stained&lt;space&gt;Glass,095_14%Black&lt;space&gt;Stained&lt;space&gt;Glass,095_15%Trapdoor,096%Stone&lt;space&gt;Monster&lt;space&gt;Egg,097_00%Cobblestone&lt;space&gt;Monster&lt;space&gt;,097_01%Stone&lt;space&gt;Brick&lt;space&gt;Monster&lt;space&gt;,097_02%Mossy&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;Mo,097_03%Cracked&lt;space&gt;Stone&lt;space&gt;Brick&lt;space&gt;,097_04%Chiseled&lt;space&gt;Stone&lt;space&gt;Brick,097_05%Stone&lt;space&gt;Bricks,098_00%Mossy&lt;space&gt;Stone&lt;space&gt;Bricks,098_01%Cracked&lt;space&gt;Stone&lt;space&gt;Bricks,098_02%Chiseled&lt;space&gt;Stone&lt;space&gt;Brick,098_03%Huge&lt;space&gt;Brown&lt;space&gt;Mushroom,099%Huge&lt;space&gt;Red&lt;space&gt;Mushroom,100%Iron&lt;space&gt;Bars,101%Glass&lt;space&gt;Pane,102%Melon&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,103%Vines,106%Fence&lt;space&gt;Gate,107%Brick&lt;space&gt;Stairs,108%Stone&lt;space&gt;Brick&lt;space&gt;Stairs,109%Mycelium,110%Lily&lt;space&gt;Pad,111%Nether&lt;space&gt;Brick,112%Nether&lt;space&gt;Brick&lt;space&gt;Fence,113%Nether&lt;space&gt;Brick&lt;space&gt;Stairs,114%Enchantment&lt;space&gt;Table,116%End&lt;space&gt;Portal&lt;space&gt;&lt;openparen&gt;block&lt;closeparen&gt;,120%End&lt;space&gt;Stone,121%Dragon&lt;space&gt;Egg,122%Redstone&lt;space&gt;Lamp,123%Double&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Slab,125_00%Double&lt;space&gt;Spruce&lt;space&gt;Wood&lt;space&gt;S,125_01%Double&lt;space&gt;Birch&lt;space&gt;Wood&lt;space&gt;Sl,125_02%Double&lt;space&gt;Jungle&lt;space&gt;Wood&lt;space&gt;S,125_03%Double&lt;space&gt;Acacia&lt;space&gt;Wood&lt;space&gt;S,125_04%Double&lt;space&gt;Dark&lt;space&gt;Oak&lt;space&gt;Wood,125_05%Oak&lt;space&gt;Wood&lt;space&gt;Slab,126_00%Spruce&lt;space&gt;Wood&lt;space&gt;Slab,126_01%Birch&lt;space&gt;Wood&lt;space&gt;Slab,126_02%Jungle&lt;space&gt;Wood&lt;space&gt;Slab,126_03%Acacia&lt;space&gt;Wood&lt;space&gt;Slab,126_04%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Slab,126_05%Sandstone&lt;space&gt;Stairs,128%Emereld&lt;space&gt;Ore,129%Ender&lt;space&gt;Chest,130%Tripwire&lt;space&gt;Hook,131%Block&lt;space&gt;of&lt;space&gt;Emereld,133%Spruce&lt;space&gt;Wood&lt;space&gt;Stairs&lt;space&gt;,134%Birch&lt;space&gt;Wood&lt;space&gt;Stairs,135%Jungle&lt;space&gt;Wood&lt;space&gt;Stairs,136%Command&lt;space&gt;Block,137%Beacon,138%Cobblestone&lt;space&gt;Wall,139_00%Mossy&lt;space&gt;Cobblestone&lt;space&gt;Wa,139_01%Wooden&lt;space&gt;Button,143%Anvil,145_00%Slightly&lt;space&gt;Damaged&lt;space&gt;Anv,145_01%Very&lt;space&gt;Damaged&lt;space&gt;Anvil,145_02%Trapped&lt;space&gt;Chest,146%Weighted&lt;space&gt;Pressure&lt;space&gt;Pl,147%Weighted&lt;space&gt;Pressure&lt;space&gt;Pl,148%Daylight&lt;space&gt;Sensor,151%Block&lt;space&gt;of&lt;space&gt;Redstone,152%Nether&lt;space&gt;Quartz&lt;space&gt;Ore,153%Hopper,154%Block&lt;space&gt;of&lt;space&gt;Quartz,155_00%Chiseled&lt;space&gt;Quartz&lt;space&gt;Bloc,155_01%Pillar&lt;space&gt;Quartz&lt;space&gt;Block,155_02%Quartz&lt;space&gt;Stairs,156%Activator&lt;space&gt;Rail,157%Dropper,158%White&lt;space&gt;Stained&lt;space&gt;Clay,159_00%Orange&lt;space&gt;Stained&lt;space&gt;Clay,159_01%Magenta&lt;space&gt;Stained&lt;space&gt;Clay,159_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;C,159_03%Yellow&lt;space&gt;Stained&lt;space&gt;Clay,159_04%Lime&lt;space&gt;Stained&lt;space&gt;Clay,159_05%Pink&lt;space&gt;Stained&lt;space&gt;Clay,159_06%Gray&lt;space&gt;Stained&lt;space&gt;Clay,159_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;C,159_08%Cyan&lt;space&gt;Stained&lt;space&gt;Clay,159_09%Purple&lt;space&gt;Stained&lt;space&gt;Clay,159_10%Blue&lt;space&gt;Stained&lt;space&gt;Clay,159_11%Brown&lt;space&gt;Stained&lt;space&gt;Clay,159_12%Green&lt;space&gt;Stained&lt;space&gt;Clay,159_13%Red&lt;space&gt;Stained&lt;space&gt;Clay,159_14%Black&lt;space&gt;Stained&lt;space&gt;Clay,159_15%White&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_00%Orange&lt;space&gt;Stained&lt;space&gt;Glass,160_01%Magenta&lt;space&gt;Stained&lt;space&gt;Glas,160_02%Light&lt;space&gt;Blue&lt;space&gt;Stained&lt;space&gt;G,160_03%Yellow&lt;space&gt;Stained&lt;space&gt;Glass,160_04%Lime&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_05%Pink&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_06%Gray&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_07%Light&lt;space&gt;Gray&lt;space&gt;Stained&lt;space&gt;G,160_08%Cyan&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_09%Purple&lt;space&gt;Stained&lt;space&gt;Glass,160_10%Blue&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;P,160_11%Brown&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_12%Green&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_13%Red&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;Pa,160_14%Black&lt;space&gt;Stained&lt;space&gt;Glass&lt;space&gt;,160_15%Acacia&lt;space&gt;Leaves,161_00%Dark&lt;space&gt;Oak&lt;space&gt;Leaves,161_01%Acacia&lt;space&gt;Wood,162_00%Dark&lt;space&gt;Oak&lt;space&gt;Wood,162_01%Acacia&lt;space&gt;Wood&lt;space&gt;Stairs,163%Dark&lt;space&gt;Oak&lt;space&gt;Wood&lt;space&gt;Stairs,164%Slime&lt;space&gt;Block,165%Barrier,166%Iron&lt;space&gt;Trapdoor,167%Prismarine,168_00%Prismarine&lt;space&gt;Bricks,168_01%Dark&lt;space&gt;Prismarine,168_02%Sea&lt;space&gt;Lantern,169%Hay&lt;space&gt;Bale,170%White&lt;space&gt;Carpet,171_00%Orange&lt;space&gt;Carpet,171_01%Magenta&lt;space&gt;Carpet,171_02%Light&lt;space&gt;Blue&lt;space&gt;Carpet,171_03%Yellow&lt;space&gt;Carpet,171_04%Lime&lt;space&gt;Carpet,171_05%Pink&lt;space&gt;Carpet,171_06%Gray&lt;space&gt;Carpet,171_07%Light&lt;space&gt;Gray&lt;space&gt;Carpet,171_08%Cyan&lt;space&gt;Carpet,171_09%Purple&lt;space&gt;Carpet,171_10%Blue&lt;space&gt;Carpet,171_11%Brown&lt;space&gt;Carpet,171_12%Green&lt;space&gt;Carpet,171_13%Red&lt;space&gt;Carpet,171_14%Black&lt;space&gt;Carpet,171_15%Hardened&lt;space&gt;Clay,172%Block&lt;space&gt;of&lt;space&gt;Coal,173%Packed&lt;space&gt;Ice,174%Sunflower,175_00%Lilac,175_01%Double&lt;space&gt;Tallgrass,175_02%Large&lt;space&gt;Fern,175_03%Rose&lt;space&gt;Bush,175_04%Peony,175_05%Red&lt;space&gt;Sandstone,179_00%Chiseled&lt;space&gt;Red&lt;space&gt;Sandsto,179_01%Smooth&lt;space&gt;Red&lt;space&gt;Sandstone,179_02%Red&lt;space&gt;Sandstone&lt;space&gt;Stairs,180%Red&lt;space&gt;Sandstone&lt;space&gt;Slab,182%Spruce&lt;space&gt;Fence&lt;space&gt;Gate,183%Birch&lt;space&gt;Fence&lt;space&gt;Gate,184%Jungle&lt;space&gt;Fence&lt;space&gt;Gate,185%Dark&lt;space&gt;Oak&lt;space&gt;Fence&lt;space&gt;Gate,186%Acacia&lt;space&gt;Fence&lt;space&gt;Gate,187%Spruce&lt;space&gt;Fence,188%Birch&lt;space&gt;Fence,189%Jungle&lt;space&gt;Fence,190%Dark&lt;space&gt;Oak&lt;space&gt;Fence,191%Acacia&lt;space&gt;Fence,192 Minecraft blockID:"
+#! DEFAULT_VALUE="001_00"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL INTEGER_OR_ATTR VERTICALOFFSET Vertical Offset:"
+#! DEFAULT_VALUE="0"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="1204 -1794"
+#! BOUNDING_RECT="1204 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="MinecraftBlock,$(MINECRAFTBLOCK)"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="AttributeSplitter"
+#! VERSION="3"
+#! POSITION="1720 -1794"
+#! BOUNDING_RECT="1720 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="_"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter"/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="MinecraftBlock"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2236 -1794"
+#! BOUNDING_RECT="2236 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="blockID,&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;,blockData,&quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;-1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST _list&lt;opencurly&gt;1&lt;closecurly&gt; NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;1&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="AttributeRemover"
+#! VERSION="1"
+#! POSITION="2752 -1794"
+#! BOUNDING_RECT="2752 -1794 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRemover"/>
+#! <XFORM_PARM PARM_NAME="REMOVE_ATTRS" PARM_VALUE="MinecraftBlock"/>
+#! <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE="_list&lt;opencurly&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="GeometryFilter"
+#! VERSION="6"
+#! POSITION="688 -1587"
+#! BOUNDING_RECT="688 -1587 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="POINTCLOUD"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GeometryFilter"/>
+#! <XFORM_PARM PARM_NAME="GEOM_PORT_NAMES" PARM_VALUE="Pointcloud"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INSTANTIATE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="BREAK_AGG" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="PointCloudComponentRemover"
+#! VERSION="0"
+#! POSITION="1204 -1518"
+#! BOUNDING_RECT="1204 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentRemover"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE" PARM_VALUE="blockID,blockData,vertical_offset"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="PointCloudComponentAdder"
+#! VERSION="0"
+#! POSITION="3784 -1311"
+#! BOUNDING_RECT="3784 -1311 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD" PARM_VALUE="blockID,UInt16,&lt;at&gt;Value&lt;openparen&gt;blockID&lt;closeparen&gt;,blockData,UInt8,&lt;at&gt;Value&lt;openparen&gt;blockData&lt;closeparen&gt;,vertical_offset,Int8,&lt;at&gt;Value&lt;openparen&gt;_vertical_offset&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentAdder"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="1720 -1518"
+#! BOUNDING_RECT="1720 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="MinecraftBlock {$(MINECRAFTBLOCK)}"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="AttributeSplitter"
+#! VERSION="3"
+#! POSITION="2236 -1518"
+#! BOUNDING_RECT="2236 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="_"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter_2"/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="MinecraftBlock"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2752 -1518"
+#! BOUNDING_RECT="2752 -1518 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="blockID,&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;0&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;,blockData,&quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;_FME_NO_OP_&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST _list&lt;opencurly&gt;1&lt;closecurly&gt; NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;int&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;1&lt;closecurly&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="11"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="172 -1587"
+#! BOUNDING_RECT="172 -1587 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15189"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_vertical_offset {$(VERTICALOFFSET)}"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="Tester"
+#! VERSION="2"
+#! POSITION="3268 -1449"
+#! BOUNDING_RECT="3268 -1449 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="PASSED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST blockData NOT_ATTRIBUTE_IS_MISSING &quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="13"
+#! TYPE="PointCloudComponentAdder"
+#! VERSION="0"
+#! POSITION="3784 -1656"
+#! BOUNDING_RECT="3784 -1656 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15246"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_vertical_offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MinecraftBlock" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD" PARM_VALUE="blockID,UInt16,&lt;at&gt;Value&lt;openparen&gt;blockID&lt;closeparen&gt;,vertical_offset,Int8,&lt;at&gt;Value&lt;openparen&gt;_vertical_offset&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentAdder_2"/>
+#! <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="14"
+#! NAME="Styled"
+#! POSITION="4644 -1863"
+#! BOUNDING_RECT="4644 -1863 -1 -1"
+#! COLLAPSED="true"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="15"
+#! NAME="Input"
+#! POSITION="-344 -1587"
+#! BOUNDING_RECT="-344 -1587 -1 -1"
+#! COLLAPSED="true"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="19"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="23"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="27"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="29"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="30"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="13"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="31"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! </SUBDOCUMENT>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_GEOJSON_1,GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1,GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1,GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1,GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1,GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1,SourceDataset_SHAPE_1,SHAPE_IN_SIMPLE_DONUT_GEOMETRY_SHAPE_1,SHAPE_IN_ENCODING_SHAPE_1,SHAPE_IN_EXPOSE_ATTRS_GROUP_SHAPE_1,SHAPE_IN_SEARCH_ENVELOPE_MINX_SHAPE_1,SHAPE_IN_SEARCH_ENVELOPE_MINY_SHAPE_1,SHAPE_IN_SEARCH_ENVELOPE_MAXX_SHAPE_1,SHAPE_IN_SEARCH_ENVELOPE_MAXY_SHAPE_1,SHAPE_IN_CLIP_TO_ENVELOPE_SHAPE_1,SHAPE_IN_NETWORK_AUTHENTICATION_SHAPE_1,SHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_SHAPE_1,_MEASURES_AS_Z_SHAPE_1,SHAPE_IN_DISSOLVE_HOLES_SHAPE_1,SHAPE_IN_REPORT_BAD_GEOMETRY_SHAPE_1,SHAPE_IN_TRIM_PRECEDING_SPACES_SHAPE_1,SourceDataset_ARCVIEWGRID_1,ARCVIEWGRID_IN_EXPOSE_ATTRS_GROUP_ARCVIEWGRID_1,ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINX_ARCVIEWGRID_1,ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINY_ARCVIEWGRID_1,ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXX_ARCVIEWGRID_1,ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXY_ARCVIEWGRID_1,ARCVIEWGRID_IN_CLIP_TO_ENVELOPE_ARCVIEWGRID_1,ARCVIEWGRID_IN_NETWORK_AUTHENTICATION_ARCVIEWGRID_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_ARCVIEWGRID_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
+DEFAULT_MACRO DestDataset_MINECRAFT C:\minecraft-stl
+GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
+DEFAULT_MACRO SourceDataset_GEOJSON C:\minecraft-stl\Water_Bdy.geojson
+GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO SourceDataset_SHAPE C:\minecraft-stl\Soil_Survey.shp
+GUI MULTIFILE SourceDataset_SHAPE Shape_Files(*.shp)|*.shp|Compressed_Shape_Files(*.shz)|*.shz|All_Files(*)|* Source Esri Shape File(s):
+DEFAULT_MACRO SourceDataset_ARCVIEWGRID C:\minecraft-stl\resample
+GUI DIRNAME_SRC SourceDataset_ARCVIEWGRID Source Esri ArcGIS Binary Grid (AIG) Folder:
+INCLUDE [ if {{$(DestDataset_MINECRAFT)} == {}} { puts_real {Parameter 'DestDataset_MINECRAFT' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEOJSON)} == {}} { puts_real {Parameter 'SourceDataset_GEOJSON' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_SHAPE)} == {}} { puts_real {Parameter 'SourceDataset_SHAPE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_ARCVIEWGRID)} == {}} { puts_real {Parameter 'SourceDataset_ARCVIEWGRID' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! encoding="utf-8"
+#! WORKSPACE_VERSION 1
+# ============================================================================ 
+# 
+# This mapping file was generated by FME Workbench
+# on 05/30/15 11:05:27 for translation between SHAPE and MINECRAFT
+# 
+# This workspace was generated with FME build 15482
+#
+# You may edit this mapping file to customize its operation.  Comments are 
+# placed throughout to assist you. 
+# 
+# Modification History:
+# 
+#     Name              Date     Description
+#     ================= ======== =============================================
+# 
+# 
+# ============================================================================ 
+# ============================================================================ 
+# The following line defines the title presented to the user when this
+# mapping file is run through the FME GUI.  You may modify this
+# if a more meaningful title would be appropriate.
+GUI TITLE SHAPE to MINECRAFT Translation 
+# ============================================================================ 
+# The following line names the log file to which useful statistics about
+# the translation will be written.  This line can be uncommented and
+# updated if you do wish to keep these statistics.
+# LOG_FILENAME translation.log
+# LOG_APPEND NO
+# ============================================================================ 
+# The following line instructs the FME to log any features that do not
+# match any of the source feature patterns listed further down in
+# this file.  If you are modifying this mapping file, this will be
+# useful to describe to you exactly which features you are losing
+# during translation, if the statistics indicate that features are
+# not being correlated or grouped.  Uncorrelated features do not
+# match any source specification, ungrouped features do not have
+# any corresponding _DEF line. 
+# FME_DEBUG UNGROUPED UNCORRELATED
+# ============================================================================ 
+# The following two lines define the type of reader and writer to be
+# used for this translation.  If you want to translate your data
+# back into its original format, you may make a copy of this file
+# and switch the reader and writer types.  If you rerun the FME, you
+# will get your original data back again (together with any modifications
+# you made in the meantime).  Note that several formats are NOT
+# bi-directional (for example, GIF can only be used as a WRITER)
+# so a reverse translation may not always be possible.
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} NULL
+MULTI_READER_FORMAT{0} GEOJSON
+MULTI_READER_KEYWORD{0} GEOJSON_1
+MULTI_READER_GEN_DIRECTIVES{0} SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXY,0,EXPOSE_ATTRS_GROUP,,GEOJSON_EXPOSE_FORMAT_ATTRS,,DELETE_DOWNLOAD_FILE,Yes,CLIP_TO_ENVELOPE,NO,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,Yes,USE_SEARCH_ENVELOPE,NO,_MERGE_SCHEMAS,YES
+MULTI_READER_TYPE{1} NULL
+MULTI_READER_FORMAT{1} SHAPE
+MULTI_READER_KEYWORD{1} SHAPE_1
+MULTI_READER_GEN_DIRECTIVES{1} SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXX,0,ENCODING,SYSTEM,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXY,0,EXPOSE_ATTRS_GROUP,,SHAPE_EXPOSE_FORMAT_ATTRS,,CLIP_TO_ENVELOPE,NO,USE_SEARCH_ENVELOPE,NO,_MERGE_SCHEMAS,YES,UPPER_CASE_ATTR_NAMES,No,SIMPLE_DONUT_GEOMETRY,simple
+MULTI_READER_TYPE{2} ARCVIEWGRID
+MULTI_READER_KEYWORD{2} ARCVIEWGRID_1
+MULTI_READER_GEN_DIRECTIVES{2} EXPOSE_ATTRS_GROUP,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXY,0,_MERGE_SCHEMAS,YES,ARCVIEWGRID_EXPOSE_FORMAT_ATTRS,,USE_SEARCH_ENVELOPE,NO,GROUP_BY_DATASET,No,CLIP_TO_ENVELOPE,NO
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} MINECRAFT
+MULTI_WRITER_KEYWORD{0} MINECRAFT_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEOJSON_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_1
+DEFAULT_MACRO SourceDataset_GEOJSON_1 $(SourceDataset_GEOJSON)
+GUI FILE_OR_URL SourceDataset_GEOJSON_1 GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1 Yes
+GEOJSON_1_DELETE_DOWNLOAD_FILE "$(GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1)"
+GUI CHECKBOX GEOJSON_IN_DELETE_DOWNLOAD_FILE_GEOJSON_1 Yes%No Delete downloaded file
+DEFAULT_MACRO GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1 
+GEOJSON_1_EXPOSE_ATTRS_GROUP "$(GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1)"
+GUI DISCLOSUREGROUP GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_1 GEOJSON_EXPOSE_FORMAT_ATTRS Schema Attributes
+DEFAULT_MACRO GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1 Yes
+GEOJSON_1_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 0
+GEOJSON_1_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 NO
+GEOJSON_1_CLIP_TO_ENVELOPE "$(GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1)"
+GUI OPTIONAL CHECKBOX GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 
+GEOJSON_1_NETWORK_AUTHENTICATION "$(GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1)"
+GUI OPTIONAL AUTHENTICATOR GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1 Search Envelope Coordinate System:
+GEOJSON_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_1)"
+# ===========================================================================
+GEOJSON_1_DATASET "$(SourceDataset_GEOJSON_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "SHAPE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SHAPE SHAPE_1
+# ============================================================================
+# The following GUI line prompts for the source shape files
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_SHAPE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER SHAPE SHAPE_1
+DEFAULT_MACRO SourceDataset_SHAPE_1 $(SourceDataset_SHAPE)
+GUI MULTIFILE SourceDataset_SHAPE_1 Shape_Files(*.shp)|*.shp|Compressed_Shape_Files(*.shz)|*.shz|All_Files(*)|* Source Esri Shape File(s):
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or shape_.
+SHAPE_1_UNENCODED_ATTR_PREFIX fme_ shape_
+# ============================================================================
+# Determines whether the attribute names should be uppercased, or whether they
+# should stay as specified in the shape file. Once the mapping file/workspace
+# has been generated, the value for this keyword should not be changed.
+DEFAULT_MACRO SHAPE_IN_UPPER_CASE_ATTR_NAMES_SHAPE_1 No
+SHAPE_1_UPPER_CASE_ATTR_NAMES "$(SHAPE_IN_UPPER_CASE_ATTR_NAMES_SHAPE_1)"
+# ============================================================================
+# Option to use simple donut geometry creation, which is faster than the
+# original creation method, but less meticulous at detecting and correcting
+# geometric anomalies (i.e.holeswithinholes)
+DEFAULT_MACRO SHAPE_IN_SIMPLE_DONUT_GEOMETRY_SHAPE_1 simple
+SHAPE_1_SIMPLE_DONUT_GEOMETRY "$(SHAPE_IN_SIMPLE_DONUT_GEOMETRY_SHAPE_1)"
+GUI LOOKUP_CHOICE SHAPE_IN_SIMPLE_DONUT_GEOMETRY_SHAPE_1 "Orientation Only",simple%"Orientation and Spatial Relationship",complex Donut Geometry Detection
+# ============================================================================
+# The following keyword allows the user to choose what encoding to
+# use for reading the shape file, overrides dbf file LDID or .cpg
+# file if present.
+DEFAULT_MACRO SHAPE_IN_ENCODING_SHAPE_1 SYSTEM
+SHAPE_1_ENCODING "$(SHAPE_IN_ENCODING_SHAPE_1)"
+GUI OPTIONAL ENCODING SHAPE_IN_ENCODING_SHAPE_1 ANSI%SYSTEM%BIG5%EUC%HKBIG5%ISO%OEM%SJIS%UTF-8%CP437%CP708%CP720%CP737%CP775%CP850%CP852%CP855%CP857%CP860%CP861%CP862%CP863%CP864%CP865%CP866%CP869%CP874%CP932%CP936%CP950%CP1250%CP1251%CP1252%CP1253%CP1254%CP1255%CP1256%CP1257%CP1258%ISO8859-1%ISO8859-2%ISO8859-3%ISO8859-4%ISO8859-5%ISO8859-6%ISO8859-7%ISO8859-8%ISO8859-9%ISO-8859-11%ISO8859-13%ISO8859-15%WINDOWS-874 Character Encoding:
+#Note: Using the search envelope requires the shape index files (.sbnand.sbx)
+DEFAULT_MACRO SHAPE_IN_EXPOSE_ATTRS_GROUP_SHAPE_1 
+SHAPE_1_EXPOSE_ATTRS_GROUP "$(SHAPE_IN_EXPOSE_ATTRS_GROUP_SHAPE_1)"
+GUI DISCLOSUREGROUP SHAPE_IN_EXPOSE_ATTRS_GROUP_SHAPE_1 SHAPE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_SEARCH_ENVELOPE_MINX_SHAPE_1 0
+SHAPE_1_SEARCH_ENVELOPE "$(SHAPE_IN_SEARCH_ENVELOPE_MINX_SHAPE_1)"
+GUI OPTIONAL FLOAT SHAPE_IN_SEARCH_ENVELOPE_MINX_SHAPE_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_SEARCH_ENVELOPE_MINY_SHAPE_1 0
+SHAPE_1_SEARCH_ENVELOPE "$(SHAPE_IN_SEARCH_ENVELOPE_MINY_SHAPE_1)"
+GUI OPTIONAL FLOAT SHAPE_IN_SEARCH_ENVELOPE_MINY_SHAPE_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_SEARCH_ENVELOPE_MAXX_SHAPE_1 0
+SHAPE_1_SEARCH_ENVELOPE "$(SHAPE_IN_SEARCH_ENVELOPE_MAXX_SHAPE_1)"
+GUI OPTIONAL FLOAT SHAPE_IN_SEARCH_ENVELOPE_MAXX_SHAPE_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_SEARCH_ENVELOPE_MAXY_SHAPE_1 0
+SHAPE_1_SEARCH_ENVELOPE "$(SHAPE_IN_SEARCH_ENVELOPE_MAXY_SHAPE_1)"
+GUI OPTIONAL FLOAT SHAPE_IN_SEARCH_ENVELOPE_MAXY_SHAPE_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_CLIP_TO_ENVELOPE_SHAPE_1 NO
+SHAPE_1_CLIP_TO_ENVELOPE "$(SHAPE_IN_CLIP_TO_ENVELOPE_SHAPE_1)"
+GUI OPTIONAL CHECKBOX SHAPE_IN_CLIP_TO_ENVELOPE_SHAPE_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO SHAPE_IN_NETWORK_AUTHENTICATION_SHAPE_1 
+SHAPE_1_NETWORK_AUTHENTICATION "$(SHAPE_IN_NETWORK_AUTHENTICATION_SHAPE_1)"
+GUI OPTIONAL AUTHENTICATOR SHAPE_IN_NETWORK_AUTHENTICATION_SHAPE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================
+# Search Envelope Coordinate System
+# BUG18999: Re-adding directive to allow specification of a search envelope
+# in a coordinate system other than what the data is in. Note that this
+# depends on the source coordinate system being set as well.
+DEFAULT_MACRO SHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_SHAPE_1 
+GUI OPTIONAL COORDSYS SHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_SHAPE_1 Search Envelope Coordinate System:
+SHAPE_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_SHAPE_1)"
+# ============================================================================
+# The following GUI line sets whether measure values in the shape files should
+# be treated as elevations.
+DEFAULT_MACRO _MEASURES_AS_Z_SHAPE_1 no
+GUI CHOICE _MEASURES_AS_Z_SHAPE_1 yes%no Treat Measures as Elevation:
+SHAPE_1_MEASURES_AS_Z $(_MEASURES_AS_Z_SHAPE_1)
+# ============================================================================
+# The following keyword sets whether the reader dissolves holes in donuts.
+DEFAULT_MACRO SHAPE_IN_DISSOLVE_HOLES_SHAPE_1 no
+GUI CHOICE SHAPE_IN_DISSOLVE_HOLES_SHAPE_1 yes%no Dissolve Adjacent Holes:
+SHAPE_1_DISSOLVE_HOLES $(SHAPE_IN_DISSOLVE_HOLES_SHAPE_1)
+# ============================================================================
+# The following keyword sets whether bad geometry should be reported via
+# the shape_geometry_error{} list attribute.
+DEFAULT_MACRO SHAPE_IN_REPORT_BAD_GEOMETRY_SHAPE_1 no
+GUI CHOICE SHAPE_IN_REPORT_BAD_GEOMETRY_SHAPE_1 yes%no Report Geometry Anomalies:
+SHAPE_1_REPORT_BAD_GEOMETRY $(SHAPE_IN_REPORT_BAD_GEOMETRY_SHAPE_1)
+DEFAULT_MACRO SHAPE_IN_TRIM_PRECEDING_SPACES_SHAPE_1 YES
+GUI CHOICE SHAPE_IN_TRIM_PRECEDING_SPACES_SHAPE_1 yes%no Trim Preceding Spaces:
+SHAPE_1_TRIM_PRECEDING_SPACES $(SHAPE_IN_TRIM_PRECEDING_SPACES_SHAPE_1)
+SHAPE_1_DATASET "$(SourceDataset_SHAPE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "ARCVIEWGRID_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ARCVIEWGRID ARCVIEWGRID_1
+# ============================================================================
+# The following GUI line prompts for the datastore from which
+# data will be extracted
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_ARCVIEWGRID_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ARCVIEWGRID ARCVIEWGRID_1
+DEFAULT_MACRO SourceDataset_ARCVIEWGRID_1 $(SourceDataset_ARCVIEWGRID)
+GUI DIRNAME_SRC SourceDataset_ARCVIEWGRID_1 Source Esri ArcGIS Binary Grid (AIG) Folder:
+ARCVIEWGRID_1_READER_META_ATTRIBUTES fme_basename
+DEFAULT_MACRO ARCVIEWGRID_IN_GROUP_BY_DATASET_ARCVIEWGRID_1 No
+ARCVIEWGRID_1_GROUP_BY_DATASET "$(ARCVIEWGRID_IN_GROUP_BY_DATASET_ARCVIEWGRID_1)"
+DEFAULT_MACRO ARCVIEWGRID_IN_EXPOSE_ATTRS_GROUP_ARCVIEWGRID_1 
+ARCVIEWGRID_1_EXPOSE_ATTRS_GROUP "$(ARCVIEWGRID_IN_EXPOSE_ATTRS_GROUP_ARCVIEWGRID_1)"
+GUI DISCLOSUREGROUP ARCVIEWGRID_IN_EXPOSE_ATTRS_GROUP_ARCVIEWGRID_1 ARCVIEWGRID_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINX_ARCVIEWGRID_1 0
+ARCVIEWGRID_1_SEARCH_ENVELOPE "$(ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINX_ARCVIEWGRID_1)"
+GUI OPTIONAL FLOAT ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINX_ARCVIEWGRID_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINY_ARCVIEWGRID_1 0
+ARCVIEWGRID_1_SEARCH_ENVELOPE "$(ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINY_ARCVIEWGRID_1)"
+GUI OPTIONAL FLOAT ARCVIEWGRID_IN_SEARCH_ENVELOPE_MINY_ARCVIEWGRID_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXX_ARCVIEWGRID_1 0
+ARCVIEWGRID_1_SEARCH_ENVELOPE "$(ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXX_ARCVIEWGRID_1)"
+GUI OPTIONAL FLOAT ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXX_ARCVIEWGRID_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXY_ARCVIEWGRID_1 0
+ARCVIEWGRID_1_SEARCH_ENVELOPE "$(ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXY_ARCVIEWGRID_1)"
+GUI OPTIONAL FLOAT ARCVIEWGRID_IN_SEARCH_ENVELOPE_MAXY_ARCVIEWGRID_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO ARCVIEWGRID_IN_CLIP_TO_ENVELOPE_ARCVIEWGRID_1 NO
+ARCVIEWGRID_1_CLIP_TO_ENVELOPE "$(ARCVIEWGRID_IN_CLIP_TO_ENVELOPE_ARCVIEWGRID_1)"
+GUI OPTIONAL CHECKBOX ARCVIEWGRID_IN_CLIP_TO_ENVELOPE_ARCVIEWGRID_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO ARCVIEWGRID_IN_NETWORK_AUTHENTICATION_ARCVIEWGRID_1 
+ARCVIEWGRID_1_NETWORK_AUTHENTICATION "$(ARCVIEWGRID_IN_NETWORK_AUTHENTICATION_ARCVIEWGRID_1)"
+GUI OPTIONAL AUTHENTICATOR ARCVIEWGRID_IN_NETWORK_AUTHENTICATION_ARCVIEWGRID_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_ARCVIEWGRID_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_ARCVIEWGRID_1 Search Envelope Coordinate System:
+ARCVIEWGRID_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_ARCVIEWGRID_1)"
+# ===========================================================================
+ARCVIEWGRID_1_DATASET "$(SourceDataset_ARCVIEWGRID_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MINECRAFT_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER MINECRAFT MINECRAFT_1
+# The following GUI lines prompt for a Minecraft file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+# The dataset this mapping file was generated for was:
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_MINECRAFT_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER MINECRAFT MINECRAFT_1
+DEFAULT_MACRO DestDataset_MINECRAFT_1 $(DestDataset_MINECRAFT)
+GUI DIRNAME DestDataset_MINECRAFT_1 Destination Minecraft Folder:
+DEFAULT_MACRO MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1 no
+MINECRAFT_1_POPULATE_TERRAIN "$(MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1 yes%no Populate Terrain
+DEFAULT_MACRO MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1 no
+MINECRAFT_1_FILL_UNDER "$(MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1 yes%no Fill Under Point Cloud
+DEFAULT_MACRO MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1 yes
+MINECRAFT_1_CENTER_POINT_CLOUD "$(MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1 yes%no Center Point Cloud at 0,0
+DEFAULT_MACRO MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1 default
+MINECRAFT_1_GENERATOR_NAME "$(MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1)"
+GUI ACTIVECHOICE_LOOKUP MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1 Default,default,MINECRAFT_OUT_GENERATOR_OPTIONS%Amplified,amplified,MINECRAFT_OUT_GENERATOR_OPTIONS%Large<space>Biomes,largeBiomes,MINECRAFT_OUT_GENERATOR_OPTIONS%Flat,flat Generator Name
+DEFAULT_MACRO MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 
+MINECRAFT_1_GENERATOR_OPTIONS "$(MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1)"
+GUI OPTIONAL STRING_OR_CHOICE_ENCODED MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 Classic<space>Flat%Tunnelers'<space>Dream%Water<space>World%Overworld%Snowy<space>Kingdom%Bottomless<space>Pit%Desert%Redstone<space>Ready Generator Options
+GUI LOOKUP MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 <Unused>,%Classic<space>Flat,"2;7,2x3,2;1;village"%Tunnelers'<space>Dream,"2;7,230x1,5x3,2;3;stronghold,biome_1,decoration,dungeon,mineshaft"%Water<space>World,"2;7,5x1,5x3,5x12,90x9;1;biome_1,village"%Overworld,"2;7,59x1,3x3,2;1;stronghold,biome_1,village,decoration,dungeon,lake,mineshaft,lava_lake"%Snowy<space>Kingdom,"2;7,59x1,3x3,2,78;12;biome_1,village"%Bottomless<space>Pit,"2;2x4,3x3,2;1;biome_1,village"%Desert,"2;7,3x1,52x24,8x12;2;stronghold,biome_1,village,decoration,dungeon,mineshaft"%Redstone<space>Ready,"2;7,3x1,52x24;2;"
+DEFAULT_MACRO MINECRAFT_OUT_BIOME_MINECRAFT_1 1
+MINECRAFT_1_BIOME "$(MINECRAFT_OUT_BIOME_MINECRAFT_1)"
+GUI LOOKUP_CHOICE MINECRAFT_OUT_BIOME_MINECRAFT_1 Ocean,0%Plains,1%Desert,2%Extreme<space>Hills,3%Forest,4%Taiga,5%Swampland,6%River,7%Nether,8%End,9%Frozen<space>Ocean,10%Frozen<space>River,11%Ice<space>Plains,12%Ice<space>Mountains,13%Mushroom<space>Island,14%Mushroom<space>Island<space>Shore,15%Beach,16%Desert<space>Hills,17%Forest<space>Hills,18%Taiga<space>Hills,19%Extreme<space>Hills<space>Edge,20%Jungle,21%Jungle<space>Hills,22%Jungle<space>Edge,23%Deep<space>Ocean,24%Stone<space>Beach,25%Cold<space>Beach,26%Birch<space>Forest,27%Birch<space>Forest<space>Hills,28%Roofed<space>Forest,29%Cold<space>Taiga,30%Cold<space>Taiga<space>Hills,31%Mega<space>Taiga,32%Mega<space>Taiga<space>Hills,33%Extreme<space>Hills+,34%Savanna,35%Savanna<space>Plateau,36%Mesa,37%Mesa<space>Plateau<space>F,38%Mesa<space>Plateau,39%Sunflower<space>Plains,129%Desert<space>M,130%Extreme<space>Hills<space>M,131%Flower<space>Forest,132%Taiga<space>M,133%Swampland<space>M,134%Ice<space>Plains<space>Spikes,140%Jungle<space>M,149%JungleEdge<space>M,151%Birch<space>Forest<space>M,155%Birch<space>Forest<space>Hills<space>M,156%Roofed<space>Forest<space>M,157%Cold<space>Taiga<space>M,158%Mega<space>Spruce<space>Taiga,160%Redwood<space>Taiga<space>Hills<space>M,161%Extreme<space>Hills+<space>M,162%Savanna<space>M,163%Savanna<space>Plateau<space>M,164%Mesa<space>(Bryce),165%Mesa<space>Plateau<space>F<space>M,166%Mesa<space>Plateau<space>M,167 Biome
+DEFAULT_MACRO MINECRAFT_OUT_ADVANCED_MINECRAFT_1 
+GUI DISCLOSUREGROUP MINECRAFT_OUT_ADVANCED_MINECRAFT_1 FILL_BLOCK Advanced
+DEFAULT_MACRO MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1 1
+MINECRAFT_1_FILL_BLOCK "$(MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1)"
+GUI INTEGER MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1 Fill Block
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO MINECRAFT_OUT_DESTINATION_DATASETTYPE_VALIDATION_MINECRAFT_1 Yes
+MINECRAFT_1_DESTINATION_DATASETTYPE_VALIDATION "$(MINECRAFT_OUT_DESTINATION_DATASETTYPE_VALIDATION_MINECRAFT_1)"
+DEFAULT_MACRO MINECRAFT_OUT_COORDINATE_SYSTEM_GRANULARITY_MINECRAFT_1 FEATURE
+MINECRAFT_1_COORDINATE_SYSTEM_GRANULARITY "$(MINECRAFT_OUT_COORDINATE_SYSTEM_GRANULARITY_MINECRAFT_1)"
+MINECRAFT_1_DATASET "$(DestDataset_MINECRAFT_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)minecraft-stl.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_1 GEOJSON_1
+DEFAULT_MACRO DATASET_KEYWORD_SHAPE_1 SHAPE_1
+DEFAULT_MACRO DATASET_KEYWORD_ARCVIEWGRID_1 ARCVIEWGRID_1
+DEFAULT_MACRO DATASET_KEYWORD_MINECRAFT_1 MINECRAFT_1
+# -------------------------------------------------------------------------
+
+GEOJSON_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+SHAPE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+ARCVIEWGRID_1_READER_META_ATTRIBUTES fme_basename fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME minecraft-stl
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+ARCVIEWGRID_1_DEF ARCVIEWGRID
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE ARCVIEWGRID ARCVIEWGRID_1::ARCVIEWGRID multi_reader_keyword,$(DATASET_KEYWORD_ARCVIEWGRID_1) TO FME_GENERIC ::ARCVIEWGRID ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEOJSON_1_MERGE_DEF GEOJSON_1::SDEDBO.Water_Bdy EXACT SDEDBO.Water_Bdy
+SHAPE_1_MERGE_DEF SHAPE_1::Soil_Survey EXACT Soil_Survey
+ARCVIEWGRID_1_MERGE_DEF ARCVIEWGRID_1::ARCVIEWGRID EXACT ARCVIEWGRID
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SDEDBO.Water_Bdy (GEOJSON_1) Splitter"    INPUT FEATURE_TYPE SDEDBO.Water_Bdy
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Soil_Survey (SHAPE_1) Splitter"    INPUT FEATURE_TYPE Soil_Survey
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME RasterPropertyExtractor    INPUT  FEATURE_TYPE ARCVIEWGRID    OUTPUT FEATURE_TYPE RasterPropertyExtractor_OUTPUT      @RasterProperties(RASTER_ROTATION2D)
+
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[string length {<Unused>}]>0 && [string length {<Unused>}]>0 && [string equal {1} {<Unused>}] && [string equal {1} {<Unused>}]} {    puts {MACRO GEOREFERENCE_ARGS EXTENTS, "0", "@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>_num_rows<closeparen>,RasterGeoreferencer)", "<Unused>", "<Unused>", "<Unused>", "<Unused>", "<Unused>", "<Unused>"} } elseif {[string equal {<Unused>} {<Unused>}] && [string equal {<Unused>} {<Unused>}] && [string length {1}]>0 && [string length {1}]>0} {    puts {MACRO GEOREFERENCE_ARGS POINT_AND_ANGLE, "0", "@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>_num_rows<closeparen>,RasterGeoreferencer)", "1", "1", "0.0"} } else {    puts_real {RasterGeoreferencer (RasterGeoreferencer): Values must be specified for EITHER X Cell Size and Y Cell Size OR X Lower Right Coordinate and Y Lower Right Coordinate.  The entries of the other pair must be blank.}; exit 1; } ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME RasterGeoreferencer    INPUT  FEATURE_TYPE RasterPropertyExtractor_OUTPUT    OUTPUT FEATURE_TYPE RasterGeoreferencer_OUTPUT       @GeoreferenceRaster($(GEOREFERENCE_ARGS))
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RasterEvaluationFactory    FACTORY_NAME RasterExpressionEvaluator    INPUT A FEATURE_TYPE RasterGeoreferencer_OUTPUT    INTERPRETATION_LIST "PRESERVE" EXPRESSION_LIST "63+<openparen>A<openbracket>0<closebracket>*192<solidus>1095<closeparen>"    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE RasterExpressionEvaluator_RESULT
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE RasterExpressionEvaluator_RESULT    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)
+FACTORY_DEF * PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    ACCUMULATE_ATTRIBUTES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCombiner OUTPUT Splitter"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_0_VHW/95TtPV4=   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_1_VHW/95TtPV4=
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "MinecraftStyler_2 Input Input Collector"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_1_VHW/95TtPV4=   OUTPUT FEATURE_TYPE MinecraftStyler_2_Input
+MACRO MinecraftStyler_WORKSPACE_NAME MinecraftStyler_2
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_XFORMER_NAME MinecraftStyler_2
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(MinecraftStyler_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_SUB_DOC_NAME MinecraftStyler
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK 031_01
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_VERTICALOFFSET 1
+DEFAULT_MACRO MinecraftStyler_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(MinecraftStyler_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(MinecraftStyler_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(MinecraftStyler_WORKSPACE_NAME)_Input1433050328 Input Splitter"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_doFetch {} {    foreach {name val} {"_vertical_offset {$($(MinecraftStyler_WORKSPACE_NAME)_VERTICALOFFSET$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_doFetch)
+
+# -------------------------------------------------------------------------
+MACRO OUTPUT_POINTCLOUD_FTYPE not_selected
+MACRO OUTPUT_POINTCLOUD_FTYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_POINTCLOUD
+MACRO OUTPUT_INSTANCE_FTYPE not_selected
+
+Lookup $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterTable   ""  "not_selected"   fme_point_cloud $(OUTPUT_POINTCLOUD_FTYPE)
+
+MACRO COLLECTION_HANDLING NOT_THIS_TIME
+MACRO INSTANCE_FILTERING *
+INCLUDE [    if 0 {       puts "MACRO COLLECTION_HANDLING *";       if <Unused> {          puts "MACRO INSTANCE_FILTERING NOT_THIS_TIME";       };    };    if {{$(OUTPUT_INSTANCE_FTYPE)} == "not_selected"} {       puts "MACRO INSTANCE_FILTERING NOT_THIS_TIME";    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_InputPassThrough    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_OUTPUT"    OUTPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___       @Geometry(FIX_FMETYPE_FMEGEOMETRY)
+FACTORY_DEF $(INSTANCE_FILTERING) TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_InstanceTest    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    TEST @Geometry(IS_GEOMETRY_INSTANCE) == 1    OUTPUT PASSED FEATURE_TYPE $(OUTPUT_INSTANCE_FTYPE)    OUTPUT FAILED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___
+FACTORY_DEF $(COLLECTION_HANDLING) TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_CollectionTest    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    TEST &fme_type == "fme_collection"    OUTPUT FAILED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    OUTPUT PASSED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Collection___
+FACTORY_DEF $(COLLECTION_HANDLING) DeaggregateFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_Deagg    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Collection___    HOMOGENIZE_COLLECTIONS YES    RECURSIVE YES    SET_FME_TYPE YES    INSTANTIATE_GEOMETRY_INSTANCES_NEW <Unused>    OUTPUT POINT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT LINE FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT POLYGON FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT DONUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT AGGREGATE FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    OUTPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Prepped___        $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b6_targetFeatureType @Lookup($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterTable,&fme_type)
+FACTORY_DEF * TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_Router    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Prepped___    TEST @Value($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b6_targetFeatureType) != "not_selected"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(@Value($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b6_targetFeatureType))                                 @RemoveAttributes($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b6_targetFeatureType)    OUTPUT FAILED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_<UNFILTERED>"        @RemoveAttributes($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b6_targetFeatureType)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_<UNFILTERED>" ATTR MinecraftBlock $($(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK)    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT" 
+# -------------------------------------------------------------------------
+
+Tcl2 set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitDelim [FME_DecodeText {_}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitDelim]] }      {         set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitWidths [split [regsub -all {s$} {_} {}] s];         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitDelim;            set delim [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa6_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_OUTPUT" ATTR blockID <at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><closeparen><closeparen> ATTR blockData "FME_CONDITIONAL:DEFAULT_VALUE'-1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST _list<opencurly>1<closecurly> NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_'<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><closeparen><closeparen>'FME_NUM_CONDITIONS2___"    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_OUTPUT" 
+# -------------------------------------------------------------------------
+
+INCLUDE [    set macroLine "MACRO $(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_LIST_EXP ";    foreach attr [split "_list<opencurly><closecurly>"] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_OUTPUT"        @RemoveAttributes(fme_encoded,MinecraftBlock)        @RemoveAttributes(fme_pcre_match"$($(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_LIST_EXP)")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_POINTCLOUD"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover_OUTPUT"       @RemovePointCloudComponents(REMOVE,blockID,blockData,vertical_offset)
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_doFetch {} {    foreach {name val} {"MinecraftBlock {$($(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_doFetch)
+
+# -------------------------------------------------------------------------
+
+Tcl2 set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitDelim [FME_DecodeText {_}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitDelim]] }      {         set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitWidths [split [regsub -all {s$} {_} {}] s];         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitDelim;            set delim [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff6_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT" ATTR blockID <at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><closeparen><closeparen> ATTR blockData "FME_CONDITIONAL:DEFAULT_VALUE'_FME_NO_OP_'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST _list<opencurly>1<closecurly> NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_'<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><closeparen><closeparen>'FME_NUM_CONDITIONS2___"    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3_OUTPUT" 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3_OUTPUT"    TEST blockData NOT_ATTRIBUTE_IS_MISSING "" ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FAILED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_FAILED"
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_FAILED"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2_OUTPUT"       @AddPointCloudComponents(blockID,UInt16,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockID<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2)",vertical_offset,Int8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_vertical_offset<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2)")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_OUTPUT"       @AddPointCloudComponents(blockID,UInt16,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockID<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)",blockData,UInt8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockData<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)",vertical_offset,Int8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_vertical_offset<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)")
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(MinecraftStyler_WORKSPACE_NAME)_Styled1433050328 Output Collector"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_OUTPUT"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2_OUTPUT"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_OUTPUT"   OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Styled"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(MinecraftStyler_WORKSPACE_NAME))}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "MinecraftStyler_2 Styled Output Renamer/Nuker"   INPUT FEATURE_TYPE MinecraftStyler_2_Styled   OUTPUT FEATURE_TYPE MinecraftStyler_2_Styled
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "MinecraftStyler Input Input Collector"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_0_VHW/95TtPV4=   OUTPUT FEATURE_TYPE MinecraftStyler_Input
+MACRO MinecraftStyler_WORKSPACE_NAME MinecraftStyler
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_XFORMER_NAME MinecraftStyler
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(MinecraftStyler_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_SUB_DOC_NAME MinecraftStyler
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK 003_00
+MACRO $(MinecraftStyler_WORKSPACE_NAME)_VERTICALOFFSET 0
+DEFAULT_MACRO MinecraftStyler_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(MinecraftStyler_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(MinecraftStyler_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(MinecraftStyler_WORKSPACE_NAME)_Input1433050328 Input Splitter"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_doFetch {} {    foreach {name val} {"_vertical_offset {$($(MinecraftStyler_WORKSPACE_NAME)_VERTICALOFFSET$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Input"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_doFetch)
+
+# -------------------------------------------------------------------------
+MACRO OUTPUT_POINTCLOUD_FTYPE not_selected
+MACRO OUTPUT_POINTCLOUD_FTYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_POINTCLOUD
+MACRO OUTPUT_INSTANCE_FTYPE not_selected
+
+Lookup $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterTable   ""  "not_selected"   fme_point_cloud $(OUTPUT_POINTCLOUD_FTYPE)
+
+MACRO COLLECTION_HANDLING NOT_THIS_TIME
+MACRO INSTANCE_FILTERING *
+INCLUDE [    if 0 {       puts "MACRO COLLECTION_HANDLING *";       if <Unused> {          puts "MACRO INSTANCE_FILTERING NOT_THIS_TIME";       };    };    if {{$(OUTPUT_INSTANCE_FTYPE)} == "not_selected"} {       puts "MACRO INSTANCE_FILTERING NOT_THIS_TIME";    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_InputPassThrough    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_3_OUTPUT"    OUTPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___       @Geometry(FIX_FMETYPE_FMEGEOMETRY)
+FACTORY_DEF $(INSTANCE_FILTERING) TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_InstanceTest    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    TEST @Geometry(IS_GEOMETRY_INSTANCE) == 1    OUTPUT PASSED FEATURE_TYPE $(OUTPUT_INSTANCE_FTYPE)    OUTPUT FAILED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___
+FACTORY_DEF $(COLLECTION_HANDLING) TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_CollectionTest    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    TEST &fme_type == "fme_collection"    OUTPUT FAILED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    OUTPUT PASSED FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Collection___
+FACTORY_DEF $(COLLECTION_HANDLING) DeaggregateFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_Deagg    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Collection___    HOMOGENIZE_COLLECTIONS YES    RECURSIVE YES    SET_FME_TYPE YES    INSTANTIATE_GEOMETRY_INSTANCES_NEW <Unused>    OUTPUT POINT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT LINE FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT POLYGON FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT DONUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT AGGREGATE FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Input___    OUTPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Prepped___        $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b7_targetFeatureType @Lookup($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_RouterTable,&fme_type)
+FACTORY_DEF * TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_Router    INPUT FEATURE_TYPE $(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter___Prepped___    TEST @Value($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b7_targetFeatureType) != "not_selected"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(@Value($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b7_targetFeatureType))                                 @RemoveAttributes($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b7_targetFeatureType)    OUTPUT FAILED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_<UNFILTERED>"        @RemoveAttributes($(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_79186b02_1a30_4ee8_96b0_e33b3968ea9b7_targetFeatureType)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_<UNFILTERED>" ATTR MinecraftBlock $($(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK)    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT" 
+# -------------------------------------------------------------------------
+
+Tcl2 set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitDelim [FME_DecodeText {_}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitDelim]] }      {         set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitWidths [split [regsub -all {s$} {_} {}] s];         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitDelim;            set delim [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_005468cb_f90b_4ad0_9432_c9d7de903eaa7_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_doSplit)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_OUTPUT" ATTR blockID <at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><closeparen><closeparen> ATTR blockData "FME_CONDITIONAL:DEFAULT_VALUE'-1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST _list<opencurly>1<closecurly> NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_'<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><closeparen><closeparen>'FME_NUM_CONDITIONS2___"    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_OUTPUT" 
+# -------------------------------------------------------------------------
+
+INCLUDE [    set macroLine "MACRO $(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_LIST_EXP ";    foreach attr [split "_list<opencurly><closecurly>"] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_OUTPUT"        @RemoveAttributes(fme_encoded,MinecraftBlock)        @RemoveAttributes(fme_pcre_match"$($(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_LIST_EXP)")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_GeometryFilter_POINTCLOUD"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover_OUTPUT"       @RemovePointCloudComponents(REMOVE,blockID,blockData,vertical_offset)
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_doFetch {} {    foreach {name val} {"MinecraftBlock {$($(MinecraftStyler_WORKSPACE_NAME)_MINECRAFTBLOCK)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentRemover_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_doFetch)
+
+# -------------------------------------------------------------------------
+
+Tcl2 set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitDelim [FME_DecodeText {_}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitDelim]] }      {         set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitWidths [split [regsub -all {s$} {_} {}] s];         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitDelim;            set delim [set $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_0344001e_67a1_4ec9_a13b_886bffd1cbff7_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {MinecraftBlock}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_ParameterFetcher_OUTPUT"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT"         @Tcl2($(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_doSplit)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT" ATTR blockID <at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><closeparen><closeparen> ATTR blockData "FME_CONDITIONAL:DEFAULT_VALUE'_FME_NO_OP_'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST _list<opencurly>1<closecurly> NOT_ATTRIBUTE_IS_MISSING _FME_BLANK_STRING_'<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><closeparen><closeparen>'FME_NUM_CONDITIONS2___"    OUTPUT OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3_OUTPUT" 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeCreator_3_OUTPUT"    TEST blockData NOT_ATTRIBUTE_IS_MISSING "" ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FAILED FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_FAILED"
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_FAILED"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2_OUTPUT"       @AddPointCloudComponents(blockID,UInt16,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockID<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2)",vertical_offset,Int8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_vertical_offset<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2)")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder    INPUT  FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Tester_PASSED"    OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_OUTPUT"       @AddPointCloudComponents(blockID,UInt16,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockID<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)",blockData,UInt8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>blockData<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)",vertical_offset,Int8,"@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_vertical_offset<closeparen>,$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder)")
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(MinecraftStyler_WORKSPACE_NAME)_Styled1433050328 Output Collector"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_AttributeRemover_OUTPUT"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_2_OUTPUT"   INPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_PointCloudComponentAdder_OUTPUT"   OUTPUT FEATURE_TYPE "$(MinecraftStyler_WORKSPACE_NAME)_Styled"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(MinecraftStyler_WORKSPACE_NAME))}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "MinecraftStyler Styled Output Renamer/Nuker"   INPUT FEATURE_TYPE MinecraftStyler_Styled   OUTPUT FEATURE_TYPE MinecraftStyler_Styled
+# -------------------------------------------------------------------------
+FACTORY_DEF * VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner_2___VectorMerger    INPUT  FEATURE_TYPE MinecraftStyler_2_Styled    INPUT  FEATURE_TYPE MinecraftStyler_Styled    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner_2___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner_2)
+FACTORY_DEF * PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner_2___Combiner    INPUT FEATURE_TYPE PointCloudCombiner_2___MergedVectorFeatures__    ACCUMULATE_ATTRIBUTES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_2_OUTPUT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_2_OUTPUT TO MINECRAFT __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>Street_Centerlines<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_basename<lt>closeparen<gt><comma>Street_Centerlines<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+MINECRAFT_1_DEF Street_Centerlines
