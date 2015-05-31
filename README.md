@@ -22,4 +22,8 @@ Using FME, we took local GIS information and processed it into a Minecraft Map. 
 Made in St. Louis!
 
 ## TODO
-* Modify our mob skins. (Creepers now wear Chicago Cubs shirts.)
+* Modify our mob skins.
+* Creepers now wear Chicago Cubs shirts.
+* Zombies will be Redwings Fans.
+* Skeletons will be Blackhawks fans.
+* Endermen will be Rams Fan. (TODO: Make them look like Stan Kronke.)
